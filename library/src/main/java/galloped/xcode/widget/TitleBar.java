@@ -84,14 +84,14 @@ public class TitleBar extends Toolbar {
                 mTitleTextView.setSingleLine();
                 mTitleTextView.setEllipsize(TextUtils.TruncateAt.END);
                 mTitleTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, mTitleTextSize);
-                if (getTitleTextColor() != 0) {
-                    mTitleTextView.setTextColor(getTitleTextColor());
+                if (obtainTitleTextColor() != 0) {
+                    mTitleTextView.setTextColor(obtainTitleTextColor());
                 }
-                if (getTitleTextStyle() != 0) {
-                    setTextStyle(getTitleTextStyle());
+                if (obtainTitleTextStyle() != 0) {
+                    setTextStyle(obtainTitleTextStyle());
                 }
-                if (getTitleTextAppearance() != 0) {
-                    TextViewCompat.setTextAppearance(mTitleTextView, getTitleTextAppearance());
+                if (obtainTitleTextAppearance() != 0) {
+                    TextViewCompat.setTextAppearance(mTitleTextView, obtainTitleTextAppearance());
                 }
             }
             if (mTitleTextView.getParent() != this) {
@@ -128,7 +128,7 @@ public class TitleBar extends Toolbar {
         this.mTitleTextSize = titleTextSize;
     }
 
-    public int getTitleTextSize() {
+    public int obtainTitleTextSize() {
         return mTitleTextSize;
     }
 
@@ -140,7 +140,7 @@ public class TitleBar extends Toolbar {
         this.mTitleTextColor = titleTextColor;
     }
 
-    public int getTitleTextColor() {
+    public int obtainTitleTextColor() {
         return mTitleTextColor;
     }
 
@@ -163,7 +163,7 @@ public class TitleBar extends Toolbar {
         }
     }
 
-    public int getTitleTextStyle() {
+    public int obtainTitleTextStyle() {
         return mTitleTextStyle;
     }
 
@@ -180,7 +180,7 @@ public class TitleBar extends Toolbar {
         this.mTitleTextAppearance = titleTextAppearance;
     }
 
-    public int getTitleTextAppearance() {
+    public int obtainTitleTextAppearance() {
         return mTitleTextAppearance;
     }
 
@@ -192,7 +192,7 @@ public class TitleBar extends Toolbar {
     }
 
     @Nullable
-    public TextView getTitleTextView() {
+    public TextView obtainTitleTextView() {
         return mTitleTextView;
     }
 
